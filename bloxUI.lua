@@ -72,7 +72,7 @@ function BLOXHubUI:MakeWindow(config)
 
     local Tabs = {}
 
-    local function ShowTab(name)
+    local function ShowTab(Title)
         for tabTitle, tabData in pairs(Tabs) do
             tabData.Frame.Visible = (tabTitle == Title)
         end
@@ -83,7 +83,7 @@ function BLOXHubUI:MakeWindow(config)
     function window:AddTab(Title)
         local tabButton = Instance.new("TextButton", TabHolder)
         tabButton.Size = UDim2.new(1, -10, 0, 30)
-        tabButton.Text = name
+        tabButton.Text = Title
         tabButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
         tabButton.TextColor3 = Color3.new(1, 1, 1)
         tabButton.TextScaled = true
