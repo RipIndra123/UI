@@ -73,14 +73,14 @@ function BLOXHubUI:MakeWindow(config)
     local Tabs = {}
 
     local function ShowTab(name)
-        for tabName, tabData in pairs(Tabs) do
-            tabData.Frame.Visible = (tabName == name)
+        for tabTitle, tabData in pairs(Tabs) do
+            tabData.Frame.Visible = (tabTitle == Title)
         end
     end
 
     -- AddTab function
     local window = {}
-    function window:AddTab(name)
+    function window:AddTab(Title)
         local tabButton = Instance.new("TextButton", TabHolder)
         tabButton.Size = UDim2.new(1, -10, 0, 30)
         tabButton.Text = name
